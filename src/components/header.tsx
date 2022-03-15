@@ -1,10 +1,13 @@
+import clsx from "clsx";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FunctionComponent } from "react";
 
 export const Header: FunctionComponent<{ title: string | null }> = ({
   title,
 }) => {
+  const { pathname } = useRouter();
   return (
     <>
       <Head>
@@ -18,10 +21,16 @@ export const Header: FunctionComponent<{ title: string | null }> = ({
 
         <ul>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/">
+              <a className={clsx(pathname === "/" && "currentPage")}>Rules</a>
+            </Link>
           </li>
           <li>
-            <Link href="/contributing">Contributing</Link>
+            <Link href="/about">
+              <a className={clsx(pathname === "/about" && "currentPage")}>
+                About/Contributing
+              </a>
+            </Link>
           </li>
         </ul>
       </header>

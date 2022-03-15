@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import { useEffect } from "react";
 import "../../styles/globals.css";
+import "../../node_modules/highlight.js/styles/atom-one-dark.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   // From https://github.com/arp242/goatcounter/issues/482#issuecomment-1016033292

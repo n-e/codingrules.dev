@@ -1,5 +1,6 @@
 import assert from "assert";
 import { readdir, readFile } from "fs/promises";
+import hljs from "highlight.js";
 import MarkdownIt from "markdown-it";
 import { cwd } from "process";
 
@@ -48,14 +49,22 @@ export const listFullRules = async (): Promise<FullRule[]> => {
 };
 
 export const parseRule = (rule: string): RuleData => {
-  // TODO: only one h1
-
   const breakToken = "---- BRBRBR ----";
 
   let ruleTitle: string | null = null;
   const detailsTitles: string[] = [];
 
-  const md = MarkdownIt();
+  const md = MarkdownIt({
+    highlight: (str, lang) => {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return hljs.highlight(str, { language: lang }).value;
+        } catch {}
+      }
+
+      return ""; // use external default escaping
+    },
+  });
   let skip = false;
   md.renderer.rules.heading_open = function (tokens, idx) {
     const headingOpen = tokens[idx];

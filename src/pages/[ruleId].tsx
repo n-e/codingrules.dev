@@ -45,7 +45,7 @@ const Rule: NextPage<Props> = ({ rule }) => {
       <Header title={null} />
       <div className="rule" key={rule.title}>
         <h2>
-          <span>Rule {rule.id}: </span>
+          <span className="ruleNum">Rule {rule.id}: </span>
           {rule.title}
         </h2>
         <div dangerouslySetInnerHTML={{ __html: rule.summary }}></div>

@@ -25,13 +25,19 @@ const Home: NextPage<Props> = ({ rules }) => {
         <Link href={"/rule-" + r.id} key={r.title}>
           <a className="rule">
             <h2>
-              <span>Rule {r.id}: </span>
+              <span className="ruleNum">Rule {r.id}: </span>
               {r.title}
             </h2>
             <div dangerouslySetInnerHTML={{ __html: r.summary }}></div>
           </a>
         </Link>
       ))}
+      <div className="footerLink">
+        You&apos;ve seen all the rules.{" "}
+        <Link href="/about">
+          <a>Contribute a new one?</a>
+        </Link>
+      </div>
     </div>
   );
 };
