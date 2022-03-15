@@ -6,11 +6,11 @@ const About: NextPage = () => {
     <div>
       <Header title="About" />
       <main className="content">
+        <h2>About</h2>
         <p>
-          Coding Rules is a collection of rules that if you follow them will
-          help you write more robust, more maintainable code. They aim to be
-          universal, although like for every rule there can be circumstances
-          where they may be broken.
+          Coding Rules is a collection of rules that will help you write more
+          robust, more maintainable code. Although the site is pretty new and
+          only has a few rules, we aim to collect every useful rule there is!
         </p>
         <h2>Contributing</h2>
         <p>Contributions are appreciated ! You can:</p>
@@ -28,7 +28,14 @@ const About: NextPage = () => {
           <a href="https://github.com/n-e/codingrules.dev">
             n-e/codingrules.dev
           </a>
-          . Feel free to create an issue or a pull request.
+          . Feel free to create an issue or a pull request.{" "}
+          <p>
+            If you want to contribute to the rules, have a look in the{" "}
+            <a href="https://github.com/n-e/codingrules.dev/tree/main/rules">
+              rules
+            </a>{" "}
+            folder.
+          </p>
         </p>
         <h2>Sharing</h2>
         <p>
