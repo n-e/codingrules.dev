@@ -49,11 +49,11 @@ const Rule: NextPage<Props> = ({ rule }) => {
         <meta name="og:title" content={textTitle} />
         <meta
           name="og:image"
-          content={"https://www.codingrules.dev/logo-256.png"}
+          content={"https://www.codingrules.dev/logo-1024.png"}
         />
         <meta
           name="twitter:image"
-          content={"https://www.codingrules.dev/logo-256.png"}
+          content={"https://www.codingrules.dev/logo-1024.png"}
         />
         <meta name="og:type" content="article" />
         <meta
