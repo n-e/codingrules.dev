@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { resetIdCounter, Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Header } from "../components/header";
@@ -39,10 +40,28 @@ export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
 const Rule: NextPage<Props> = ({ rule }) => {
   // TODO: apparently there is a matching problem between ssr / client-side
   resetIdCounter();
-
+  const textTitle = `Rule ${rule.id}: ${rule.title}`;
   return (
     <div className={css.ruleId}>
-      <Header title={null} />
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@coding_rules" />
+        <meta name="og:title" content={textTitle} />
+        <meta
+          name="og:image"
+          content={"https://www.codingrules.dev/logo-256.png"}
+        />
+        <meta name="og:type" content="article" />
+        <meta
+          name="og:url"
+          content={"https://www.codingrules.dev/rule-" + rule.id}
+        />
+        <meta
+          name="og:description"
+          content={rule.summary.replace(/<br>/g, "\n\n")}
+        />
+      </Head>
+      <Header title={textTitle} />
       <div className="rule" key={rule.title}>
         <h2>
           <span className="ruleNum">Rule {rule.id}: </span>
