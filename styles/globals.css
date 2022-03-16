@@ -103,8 +103,10 @@ pre {
 
 .footerLink {
   display: block;
+  text-align: center;
   width: fit-content;
   margin: 30px auto;
+  padding: 0 30px;
 }
 
 main.content {

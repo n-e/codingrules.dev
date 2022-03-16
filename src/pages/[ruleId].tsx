@@ -64,9 +64,11 @@ const Rule: NextPage<Props> = ({ rule }) => {
           ))}
         </Tabs>
       </div>
-      <Link href="/">
-        <a className={css.allTheRules}>See all the rules</a>
-      </Link>
+      <div className="footerLink">
+        <Link href="/">
+          <a>See all the rules</a>
+        </Link>
+      </div>
     </div>
   );
 };
