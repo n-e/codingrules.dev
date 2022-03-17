@@ -16,6 +16,7 @@
 
 .ruleId :global(.react-tabs__tab--selected) {
   color: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .ruleId :global(.react-tabs__tab-panel) {
