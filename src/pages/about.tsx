@@ -29,13 +29,13 @@ const About: NextPage = () => {
             n-e/codingrules.dev
           </a>
           . Feel free to create an issue or a pull request.{" "}
-          <p>
-            If you want to contribute to the rules, have a look in the{" "}
-            <a href="https://github.com/n-e/codingrules.dev/tree/main/rules">
-              rules
-            </a>{" "}
-            folder.
-          </p>
+        </p>
+        <p>
+          If you want to contribute to the rules, have a look in the{" "}
+          <a href="https://github.com/n-e/codingrules.dev/tree/main/rules">
+            rules
+          </a>{" "}
+          folder.
         </p>
         <h2>Sharing</h2>
         <p>
