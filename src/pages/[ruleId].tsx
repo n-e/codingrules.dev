@@ -71,21 +71,22 @@ const Rule: NextPage<Props> = ({ rule }) => {
           <span className="ruleNum">Rule {rule.id}: </span>
           {rule.title}
         </h2>
-        <div dangerouslySetInnerHTML={{ __html: rule.summary }}></div>
-        <Tabs>
-          <TabList>
-            {rule.details.map((r) => (
-              <Tab key={r.title}>{r.title}</Tab>
-            ))}
-          </TabList>
+        <div className="ruleContents">
+          <div dangerouslySetInnerHTML={{ __html: rule.summary }}></div>
+          <Tabs>
+            <TabList>
+              {rule.details.map((r) => (
+                <Tab key={r.title}>{r.title}</Tab>
+              ))}
+            </TabList>
 
-          {rule.details.map((d) => (
-            <TabPanel key={d.title}>
-              <h3>{d.title}</h3>
-              <div dangerouslySetInnerHTML={{ __html: d.text }}></div>
-            </TabPanel>
-          ))}
-        </Tabs>
+            {rule.details.map((d) => (
+              <TabPanel key={d.title}>
+                <div dangerouslySetInnerHTML={{ __html: d.text }}></div>
+              </TabPanel>
+            ))}
+          </Tabs>
+        </div>
       </div>
       <div className="footerLink">
         <Link href="/">

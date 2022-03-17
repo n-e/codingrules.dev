@@ -13,7 +13,7 @@ const About: NextPage = () => {
           only has a few rules, we aim to collect every useful rule there is!
         </p>
         <h2>Contributing</h2>
-        <p>Contributions are appreciated ! You can:</p>
+        <p>Contributions are appreciated! You can:</p>
         <ul>
           <li>Add a new rule</li>
           <li>

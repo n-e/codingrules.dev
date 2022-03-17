@@ -41,7 +41,8 @@ header div {
 
 header a,
 .footerLink a,
-.content a {
+.content a,
+.likeALink {
   color: #6d6dce;
   text-decoration: none;
 }
@@ -52,7 +53,8 @@ header a.currentPage {
 
 header a:active,
 .footerLink a:active,
-.content a:active {
+.content a:active,
+.likeALink:active {
   color: #5a5ad4;
 }
 
@@ -86,10 +88,16 @@ h2 {
   font-weight: 500;
 }
 
-.rule div {
+.rule div.ruleContents {
   font-size: 0.9rem;
   color: #909598;
 
+  line-height: 1.3;
+}
+
+.rule div.ruleLink {
+  /* font-size: 0.9rem; */
+  padding-top: 8px;
   line-height: 1.3;
 }
 

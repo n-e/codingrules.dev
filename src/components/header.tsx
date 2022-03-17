@@ -12,6 +12,11 @@ export const Header: FunctionComponent<{ title: string | null }> = ({
     <>
       <Head>
         <title>{title ? title + " - " : ""}Coding Rules</title>
+        <link
+          rel="icon"
+          type="image/png"
+          href="https://www.codingrules.dev/favicon.ico"
+        ></link>
       </Head>
       <header>
         <h1>
@@ -30,6 +35,16 @@ export const Header: FunctionComponent<{ title: string | null }> = ({
               <a className={clsx(pathname === "/about" && "currentPage")}>
                 About/Contributing
               </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://twitter.com/coding_rules">
+              <a>Twitter</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="https://github.com/n-e/codingrules.dev">
+              <a>GitHub</a>
             </Link>
           </li>
         </ul>

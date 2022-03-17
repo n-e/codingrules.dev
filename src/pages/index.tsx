@@ -28,7 +28,15 @@ const Home: NextPage<Props> = ({ rules }) => {
               <span className="ruleNum">Rule {r.id}: </span>
               {r.title}
             </h2>
-            <div dangerouslySetInnerHTML={{ __html: r.summary }}></div>
+            <div className="ruleContents">
+              <div dangerouslySetInnerHTML={{ __html: r.summary }}></div>
+              <div className="ruleLink">
+                <span className="likeALink">
+                  {r.details.length}{" "}
+                  {r.details.length >= 2 ? "examples" : "example"}
+                </span>
+              </div>
+            </div>
           </a>
         </Link>
       ))}
